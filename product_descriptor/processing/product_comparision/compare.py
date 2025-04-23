@@ -2,8 +2,9 @@ from product_descriptor.processing.static.prompts import product_comparision_pro
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from openai import OpenAI
+import streamlit as st
 load_dotenv()
-client = OpenAI()
+client = OpenAI(api_key=st.secrets['openai'])
 
 class comparision(BaseModel):
     heading : str

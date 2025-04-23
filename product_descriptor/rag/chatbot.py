@@ -9,10 +9,11 @@ from openai import OpenAI
 import concurrent
 import numpy as np
 import json
+import streamlit as st
 from sentence_transformers import SentenceTransformer
 import os
 load_dotenv()
-client = OpenAI()
+client = OpenAI(api_key=st.secrets['openai'])
 text_splitter = RecursiveCharacterTextSplitter()
 
 # def create_embeddings(id:str):

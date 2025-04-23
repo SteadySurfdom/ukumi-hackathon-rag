@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 from openai import OpenAI
 import json
+import streamlit as st
 load_dotenv()
 
 class output_format(BaseModel):
@@ -28,7 +29,7 @@ def clean_transcript(transcript: str):
   low_conf_words = list(set(low_conf_words))
   
 
-  client = OpenAI()
+  client = OpenAI(api_key=st.secrets['openai'])
 
   response = client.beta.chat.completions.parse(
     model="gpt-4o-mini-2024-07-18",

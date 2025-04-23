@@ -7,9 +7,10 @@ import os
 import pathlib
 import json
 from colorama import Fore
+import streamlit as st
 
 load_dotenv()
-client = OpenAI()
+client = OpenAI(api_key=st.secrets['openai'])
 
 class Specification(BaseModel):
     PropertyName: str
