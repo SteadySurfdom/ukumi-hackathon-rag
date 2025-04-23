@@ -11,8 +11,8 @@ from product_descriptor.processing.product_comparision.compare import generate_r
 from colorama import Fore
 import os
 
-os.environ["OPENAI_API_KEY"] = st.secrets["api_keys"]["openai"]
-os.environ["deepgram_api_key"] = st.secrets["api_keys"]["deepgram"]
+os.environ["OPENAI_API_KEY"] = st.secrets["openai"]
+os.environ["deepgram_api_key"] = st.secrets["deepgram"]
 
 
 def parserpros(obj):
