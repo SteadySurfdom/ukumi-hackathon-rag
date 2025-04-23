@@ -1,0 +1,7 @@
+__pycache__
+.env
+env
+testsmoulik.ipynb
+tests.ipynb
+*.json
+.streamlit
